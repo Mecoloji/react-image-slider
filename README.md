@@ -1,4 +1,9 @@
 
+## Demo
+
+### See the site here: https://mecoloji.github.io/react-image-slider/
+
+
 # Creating Data File
 
 - Firstly, we have created our application, in this we just don’t need to touch index.js as always because we always work with components. Then after we have first created our `sliderData.js` file in which we will store our images, and it will be usable by just calling it. We have here added 5 images in the array, we used images from online platform, so we have to give links for these images, and alternatively we need an internet connection each time to run this application properly. You can also add images directly to the application and just give its path.
