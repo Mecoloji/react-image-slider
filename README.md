@@ -1,70 +1,26 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Creating Data File
 
-## Available Scripts
+- Firstly, we have created our application, in this we just don’t need to touch index.js as always because we always work with components. Then after we have first created our `sliderData.js` file in which we will store our images, and it will be usable by just calling it. We have here added 5 images in the array, we used images from online platform, so we have to give links for these images, and alternatively we need an internet connection each time to run this application properly. You can also add images directly to the application and just give its path.
 
-In the project directory, you can run:
+# Adding Images to The Application
 
-### `npm start`
+- Now, we need to add our `ImageSlider.js` component, in which we will write our main logic. Before that, we need to install react-icons package, For that we need to add command `npm install react-icons` in our console because we need this to add our icons for next and previous button. Now in ImageSlider component, we have added our React, useState packages, also we have imported our `SliderData.js` to access the images, And lastly we have added our `FaArrowAltCircleRight, FaArrowAltCircleLeft` icons from react-icons.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Now let’s add the section for our images and icons, we have added our both icons here, with class names, and we also added event listener on these icons for onClick event. In this event, we have called functions, one prevSlide function and other for nextSlide function. For these functions, we have added our state hook, in which we have added 0 as our default value, and we can update these when the icons get clicked.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Here, in nextSlide function, we are checking `current === length - 1 ? 0 : current + 1` this condition, so when the current slide index is equals to length-1 (which is here 4). If yes then we just simply move to 0 otherwise we will increment the number.
 
-### `npm test`
+``` 
+Note: Here we are accessing the image with its index number, as we have added these images as an array inside the SliderData.js file. And we also know that, array indexes starts from 0, so we have added number of images into the length variable. here length will be 5 and image indexes will be 0 to 4.
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Now For prevSlide we are checking `current === 0 ? length - 1 : current - 1` condition, where if it is true then we will add length-1 (which is 4) and if it is false then we will decrease the value of the index.
 
-### `npm run build`
+- Now we have added functionalities to these icons, let’s fetch the images. For that, we have used map() function to fetch the data. In this, we are adding some classes for slide and check if current is equals to index, and also we have added active class which we will customize in the CSS file. In this div we have fetched our images.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Adding CSS Styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Since our result is quite big and not pretty good-looking, we need to adjust these using our `App.css` file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- In the CSS file, we just have to adjust image size and customize these icons. Also, we have added a little bit of animations while changing the images. We also need to hide the other image so that output won’t be bad.

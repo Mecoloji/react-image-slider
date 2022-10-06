@@ -1,0 +1,22 @@
+export const SliderData = [
+  {
+    image:
+      "https://images.pexels.com/photos/2362009/pexels-photo-2362009.jpeg?cs=srgb&dl=pexels-viktor-talashuk-2362009.jpg&fm=jpg",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/2180457/pexels-photo-2180457.jpeg?cs=srgb&dl=pexels-sevenstorm-juhaszimrus-2180457.jpg&fm=jpg",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/1363517/pexels-photo-1363517.png?cs=srgb&dl=pexels-pluetoe-1363517.jpg&fm=jpg",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/3615180/pexels-photo-3615180.jpeg?cs=srgb&dl=pexels-tobias-3615180.jpg&fm=jpg",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/1787044/pexels-photo-1787044.jpeg?cs=srgb&dl=pexels-jo%C3%A3o-v%C3%ADtor-heinrichs-1787044.jpg&fm=jpg",
+  },
+];
